@@ -28,7 +28,13 @@
                    $paginas[] = array('url' => 'cadastro.php', 'label' => 'Cadastre-se');
                    $paginas[] = array('url' => 'contato.php', 'label' => 'Contato');
                ?>
-	           <?php echo 'Exercícios'; ?>
+	           <?php 
+             foreach ($paginas as $pagina){
+//echo $pagina['url'].' - '. $pagina['label'];
+//echo "<br>";
+echo '<li><a href="'.$pagina['url']. '">'.$pagina['label'].'</a></li>';
+
+             }?>
 		</ul>
 	</nav>
 </div>

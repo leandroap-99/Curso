@@ -9,7 +9,7 @@
 </head>
 <body>
     <header class="header">
-        <?php #topo ?>
+        <?php include_once 'template/topo.php' ?>
     </header>
 
     <div class="container content">
@@ -47,7 +47,7 @@
     </div>
 
     <footer class="footer">
-        <?php #rodape ?>
+        <?php include_once 'template/rodape.php' ?>
     </footer>
 
 </body>
