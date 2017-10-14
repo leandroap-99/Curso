@@ -15,6 +15,7 @@
         <!--[if lt IE 9]>
           <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
+        <?php include_once 'include/utils.php';?>
 </head>
 <body>
 <div class="container">
@@ -28,13 +29,14 @@
                    $paginas[] = array('url' => 'cadastro.php', 'label' => 'Cadastre-se');
                    $paginas[] = array('url' => 'contato.php', 'label' => 'Contato');
                ?>
-	           <?php 
-             foreach ($paginas as $pagina){
-//echo $pagina['url'].' - '. $pagina['label'];
-//echo "<br>";
-echo '<li><a href="'.$pagina['url']. '">'.$pagina['label'].'</a></li>';
-
-             }?>
+	           <?php foreach ($paginas as $pagina):?>
+                <li class = "<?= (verificaPagina($pagina['url'])) ? 'active' : '' ?>">
+                  <a href="<?=$pagina['url']; ?>">
+                  <?=$pagina ['label'];?>
+                  </a>
+              </li>
+            <?php endforeach; ?>
+             
 		</ul>
 	</nav>
 </div>

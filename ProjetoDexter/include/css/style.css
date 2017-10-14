@@ -66,6 +66,10 @@ img{
 .header ul {
    list-style: none;
 }
+.header .active a {
+   border-bottom: 2px solid #1f3574;
+   font-weight: bold;
+}
 .header li{
    display:inline;
    font-family: 'Raleway', sans-serif;
