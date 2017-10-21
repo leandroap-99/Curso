@@ -7,6 +7,16 @@
 			}
 		}
 
+		function validacampo($campo){
+if ($campo ==''){
+	return false;
+}
+return true;
+
+		}
+
+
+
 
 
 

@@ -24,6 +24,7 @@
 			<img src="img/banner-cadastro.jpg" alt="Banner Sobre">
 		</div>
 
+
 		<form action="#" method="post" class="form">
 			<p>
 				<label for="nome">Nome/Razao</label> <input type="text" name="nome"
