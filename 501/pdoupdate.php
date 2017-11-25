@@ -1,11 +1,10 @@
 <?php  
 $conexao = new PDO ('pgsql:host = localhost;dbname = pdo2','dexter','123456');
 
-$query = $conexao->prepare(updte alunos (nome,sobrenome,email) VALUES (:nome,:sobrenome,:email)');
+$query = $conexao->prepare('UPDATE alunos SET nome = :nome where id = :id');
 $pessoa = [
-':nome'=>'sidnei',
-':sobrenome'=>'Magal',
-':email'=>'sidnei@mail.com'
+':nome'=>'novonome',
+':id'=>'2'
 ];
 $query->execute($pessoa);
 
