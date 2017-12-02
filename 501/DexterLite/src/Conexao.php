@@ -1,6 +1,6 @@
 
 <?php 
-class conect
+class Conexao
 {
 	private static $instance = null;
 
@@ -19,7 +19,7 @@ class conect
 
 }
 
-$inst2 = conect::getinstance();
+$inst2 = Conexao::getinstance();
 
 
 

@@ -10,8 +10,9 @@
 <div class="container">
 
 <?php 
-require 'src/conexao.php';
-$conexao = conect::getinstance();
+require 'src/Conexao.php';
+require 'Controller/Bannercontroller/bannercontroller.php';
+$conexao = conexao::getinstance();
 /*class verifica
 {
 public function verificador()
@@ -33,8 +34,7 @@ switch ($_GET['route']){
 		break;
 
 	case 'banners':
-		$banners = $conexao->query('SELECT * FROM banners');
-		$banners = $banners->fetchall(PDO::FETCH_ASSOC);
+		$banners = Bannercontroller::read();
 		require "View/banner/read.php";
 		break;
 		case 'inserir_banner':
