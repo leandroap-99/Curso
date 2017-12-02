@@ -10,7 +10,8 @@
 <div class="container">
 
 <?php 
-
+require 'src/conexao.php';
+$conexao = conect::getinstance();
 /*class verifica
 {
 public function verificador()
@@ -33,7 +34,7 @@ switch ($_GET['route']){
 
 	case 'banners':
 		echo "<h1> Banners </h1>";
-		$conexao = new PDO ('pgsql:host = localhost;dbname = dexter_lite','dexter','123456');
+		/*$conexao = new PDO ('pgsql:host = localhost;dbname = dexter_lite','dexter','123456');*/
 		$banners = $conexao->query('SELECT * FROM banners');
 		$banners = $banners->fetchall(PDO::FETCH_ASSOC);
 			echo "<table class = 'table table-striped'>";
@@ -92,7 +93,7 @@ if ($_POST){
 	$nome = $_POST['nome'];
 	$descricao = $_POST['descricao'];
 	$url = $_POST ['url'];
-	$conexao = new PDO ('pgsql:host = localhost;dbname = dexter_lite','dexter','123456');
+	/*$conexao = new PDO ('pgsql:host = localhost;dbname = dexter_lite','dexter','123456');*/
 
 	$query = $conexao->prepare('INSERT INTO banners (nome,descricao,url) VALUES (:nome,:descricao,:url)');
 
