@@ -1,7 +1,5 @@
-
 <?php 
-namespace src\conexao;
-class Conexao
+class conect
 {
 	private static $instance = null;
 
@@ -9,7 +7,7 @@ class Conexao
 	public static function getinstance ()
 	{
 		if (self::$instance == null){
-			self::$instance = new PDO ('pgsql:host = localhost;dbname = dexter_lite','dexter','123456');
+			self::$instance = new conect();
 		}
 		return self::$instance;
 	} 
@@ -20,13 +18,10 @@ class Conexao
 
 }
 
-$inst2 = Conexao::getinstance();
+$inst2 = conect::getinstance();
+var_dump($inst2);
 
 
 
 
  ?>
-
-
-
-
